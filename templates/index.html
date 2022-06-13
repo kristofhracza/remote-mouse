@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Font awesome kit  -->
+  <script src="https://kit.fontawesome.com/b82b391bad.js" crossorigin="anonymous"></script>
   <!--  Browser Icon  -->
   <link rel="icon" href="./assets/images/favicon.ico">
   <!--  Bootstrap  -->
@@ -11,13 +13,16 @@
   <!--  My CSS and JS  -->
   <link rel="stylesheet" href="/static/main.css"></link>
   <script src="/static/coordinates.js"></script>
-  <script type="text/javascript">var ip = "{{data}}";</script>
   <title>Remote Mouse</title>
 </head>
 <body>
   <div id="navbar">
     <h1>Remote Mouse</h1>
-    <div id="status"><span id="server-ip"></span></div>
+    <div id="status">
+      <div id="commands">
+        <span class="cmds" cmd="/right-click"><i class="fas fa-angle-right"></i><i class="fas fa-mouse"></i></span>
+      </div>
+    </div>
   </div>
   <div id="control"><p id="x">Drag anywhere within this box <br></p><p id="y"></p></div>
 </body>

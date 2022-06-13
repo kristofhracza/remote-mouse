@@ -10,6 +10,7 @@ pip3 install -r requirements.txt
 # Feature list:
 - [x] Moving the mouse
 - [x] Left click
-- [ ] Right click
+- [x] Right click
+- [ ] Scroll
 - [ ] Type  
 Note: Features to be added later 

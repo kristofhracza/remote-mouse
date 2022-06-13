@@ -54,3 +54,17 @@ i{
   margin-top: 20px;
   font-weight: bold;
 }
+
+#commands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmds{
+  background-color: black;
+  color:greenyellow;
+  padding:5px;
+  margin: 10px;
+  border-radius: 10px;
+}

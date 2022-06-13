@@ -16,13 +16,19 @@ def coords():
   x = request.get_json()["x"]
   y = request.get_json()["y"]
   mouse.move(x,y)
-  return render_template("index.html",data=request.host)
+  return render_template("index.html")
 
-# Click
+# Left Click
 @app.route("/click",methods=["POST"])
 def win_click():
   mouse.click("left")
-  return render_template("index.html",data=request.host)
+  return render_template("index.html")
+
+# Right Click
+@app.route("/right-click",methods=["POST"])
+def win_click_right():
+  mouse.click("right")
+  return render_template("index.html")
 
 # Start the server
 if __name__ == "__main__":

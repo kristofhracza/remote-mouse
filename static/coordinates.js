@@ -1,7 +1,5 @@
 // Collective of listeners for touch body
-window.onload = () => {
-  // Set IP for status bar
-  document.getElementById("server-ip").textContent = ip;
+window.onload = () => {;
   const Coordinates = () => {
     var controlBox = document.getElementById("control");
     var monitorRes = { "x": 1920*2, "y": 1080 }; // multiply x or y by the number of monitors you have (setup dependent)
@@ -20,6 +18,12 @@ window.onload = () => {
     // Clicking
     controlBox.onclick = () => {
       sendPost("/click", null);
+    };
+
+    // Right clicking
+    var rc_box = document.querySelector("[cmd='/right-click']")
+    rc_box.onclick = () => {
+      sendPost("/right-click", null);
     };
   };
   // Set up listeners
