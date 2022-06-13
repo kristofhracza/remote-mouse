@@ -1,0 +1,56 @@
+@import url(//fonts.googleapis.com/css?family=Rubik);
+@import url(//fonts.googleapis.com/css?family=Roboto+Mono);
+
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+h1,h2{
+  color: black;
+  margin: 0;
+}
+
+h1,h2{
+  font-family: "Rubik";
+  font-weight: bold;
+}
+
+p,span,i {
+  font-family: "Roboto Mono";
+}
+
+i{
+  margin: 10px;
+}
+
+#control{
+  color:greenyellow;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  background-color: black;
+  position: fixed;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navbar{
+  text-align: center;
+  width: 100%;
+  height:20%;
+  background-color: greenyellow;
+}
+
+#status{
+  padding:10px;
+  margin:10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
