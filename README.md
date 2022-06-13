@@ -11,5 +11,5 @@ pip3 install -r requirements.txt
 - [x] Moving the mouse
 - [x] Left click
 - [ ] Right click
-- [ ] Type
+- [ ] Type  
 Note: Features to be added later 
