@@ -11,6 +11,6 @@ pip3 install -r requirements.txt
 - [x] Moving the mouse
 - [x] Left click
 - [x] Right click
-- [ ] Scroll
+- [x] Scroll
 - [ ] Type  
 Note: Features to be added later 

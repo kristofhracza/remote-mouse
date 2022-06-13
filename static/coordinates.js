@@ -25,6 +25,18 @@ window.onload = () => {;
     rc_box.onclick = () => {
       sendPost("/right-click", null);
     };
+
+    // Scrolling up
+    var scroll_box = document.querySelector("[cmd='/scroll-up']")
+    scroll_box.onclick = () => {
+      sendPost("/scroll-up", null);
+    };
+
+    // Scrolling down
+    var scroll_box = document.querySelector("[cmd='/scroll-down']")
+    scroll_box.onclick = () => {
+      sendPost("/scroll-down", null);
+    };
   };
   // Set up listeners
   Coordinates();
