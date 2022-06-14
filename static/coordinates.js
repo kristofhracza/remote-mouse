@@ -37,6 +37,13 @@ window.onload = () => {;
     scroll_box.onclick = () => {
       sendGet("/scroll-down", null);
     };
+
+    // Typing
+    var key_box = document.querySelector("[cmd='/type']")
+    key_box.onclick = () => {
+      var text = prompt("Type something...");
+      sendPost("/type", text);
+    };
   };
   // Set up listeners
   Coordinates();

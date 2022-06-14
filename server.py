@@ -1,4 +1,4 @@
-import mouse
+import mouse,keyboard,os
 from flask import Flask, render_template, request
 
 # Flask app
@@ -40,6 +40,17 @@ def scroll_up():
 @app.route("/scroll-down")
 def scroll_down():
   mouse.wheel(delta=-5)
+  return render_template("index.html")
+
+# Typing
+@app.route("/type",methods=["POST"])
+def type():
+  # Copy data to clipboard
+  data = request.get_data()
+  cmd = f"echo {data.decode()} | clip"
+  os.system(cmd)
+  keyboard.send("ctrl+v")
+  keyboard.send("enter")
   return render_template("index.html")
 
 # Start the server

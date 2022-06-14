@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 - [x] Left click
 - [x] Right click
 - [x] Scroll
-- [ ] Type  
+- [x] Type  
 
 # Help with buttons:
 - Moving the mouse --> use the big box on the screen
@@ -20,3 +20,4 @@ pip3 install -r requirements.txt
 - Right click --> `mouse icon`
 - Scroll up --> `up arrow`
 - Scroll down --> `down arrow` 
+- Typing --> `keyboard`
