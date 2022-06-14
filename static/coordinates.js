@@ -17,25 +17,25 @@ window.onload = () => {;
 
     // Clicking
     controlBox.onclick = () => {
-      sendPost("/click", null);
+      sendGet("/click", null);
     };
 
     // Right clicking
     var rc_box = document.querySelector("[cmd='/right-click']")
     rc_box.onclick = () => {
-      sendPost("/right-click", null);
+      sendGet("/right-click", null);
     };
 
     // Scrolling up
     var scroll_box = document.querySelector("[cmd='/scroll-up']")
     scroll_box.onclick = () => {
-      sendPost("/scroll-up", null);
+      sendGet("/scroll-up", null);
     };
 
     // Scrolling down
     var scroll_box = document.querySelector("[cmd='/scroll-down']")
     scroll_box.onclick = () => {
-      sendPost("/scroll-down", null);
+      sendGet("/scroll-down", null);
     };
   };
   // Set up listeners
@@ -49,3 +49,12 @@ const sendPost = (path,data) => {
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.send(data);
 };
+
+// Re-usable get requests
+const sendGet = (path, data) => {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", path, true);
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.send(data);
+};
+

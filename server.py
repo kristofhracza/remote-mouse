@@ -19,25 +19,25 @@ def coords():
   return render_template("index.html")
 
 # Left Click
-@app.route("/click",methods=["POST"])
+@app.route("/click")
 def win_click():
   mouse.click("left")
   return render_template("index.html")
 
 # Right Click
-@app.route("/right-click",methods=["POST"])
+@app.route("/right-click")
 def win_click_right():
   mouse.click("right")
   return render_template("index.html")
 
 # Scroll up
-@app.route("/scroll-up",methods=["POST"])
+@app.route("/scroll-up")
 def scroll_up():
   mouse.wheel(delta=5)
   return render_template("index.html")
 
 # Scroll down
-@app.route("/scroll-down",methods=["POST"])
+@app.route("/scroll-down")
 def scroll_down():
   mouse.wheel(delta=-5)
   return render_template("index.html")
