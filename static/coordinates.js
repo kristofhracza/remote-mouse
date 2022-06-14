@@ -2,17 +2,21 @@
 window.onload = () => {;
   const Coordinates = () => {
     var controlBox = document.getElementById("control");
-    var monitorRes = { "x": 1920*2, "y": 1080 }; // multiply x or y by the number of monitors you have (setup dependent)
-    var phoneRes = { "x": controlBox.offsetWidth, "y": controlBox.offsetHeight};
-    // Dragging mouse
-    controlBox.ontouchmove = (e) => {
-      var x = e.touches[0].clientX;
-      var y = e.touches[0].clientY;
-      x = x / phoneRes.x * monitorRes.x;
-      y = y / phoneRes.y * monitorRes.y;
+     // Start of touch
+     controlBox.ontouchstart = (e) => {
+      window.x1 = e.touches[0].clientX;
+      window.y1 = e.touches[0].clientY;
+      document.getElementById("x").textContent = `X :  ${Math.round(window.x1)}`;
+      document.getElementById("y").textContent = `Y :  ${Math.round(window.y1)}`;  
+    };
+
+    // End of touch
+    controlBox.ontouchend = (e) => {
+      var x = e.changedTouches[0].clientX;
+      var y = e.changedTouches[0].clientY;
+      sendPost("/coords", JSON.stringify({ "x": x - window.x1, "y": y - window.y1 }));     
       document.getElementById("x").textContent = `X :  ${Math.round(x)}`;
       document.getElementById("y").textContent = `Y :  ${Math.round(y)}`;
-      sendPost("/coords", JSON.stringify({ "x": x, "y": y }));      
     };
 
     // Clicking

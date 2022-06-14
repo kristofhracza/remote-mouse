@@ -15,7 +15,7 @@ def main():
 def coords():
   x = request.get_json()["x"]
   y = request.get_json()["y"]
-  mouse.move(x,y)
+  mouse.move(x,y,False,duration=0.06)
   return render_template("index.html")
 
 # Left Click
