@@ -17,6 +17,6 @@ pip3 install -r requirements.txt
 # Help with buttons:
 - Moving the mouse --> use the big box on the screen
 - Left click --> click in the big box
-- Right click --> `right arrow` and `mouse icon`
-- Scroll up --> `scroll` and `up arrow`
-- Scroll down --> `scroll` and  `down arrow` 
+- Right click --> `mouse icon`
+- Scroll up --> `up arrow`
+- Scroll down --> `down arrow` 
