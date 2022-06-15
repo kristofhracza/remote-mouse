@@ -14,7 +14,9 @@ window.onload = () => {;
     controlBox.ontouchend = (e) => {
       var x = e.changedTouches[0].clientX;
       var y = e.changedTouches[0].clientY;
-      sendPost("/coords", JSON.stringify({ "x": x - window.x1, "y": y - window.y1 }));     
+      x = (x - window.x1) * 2;
+      y = (y - window.y1) * 2;
+      sendPost("/coords", JSON.stringify({ "x": x, "y": y }));     
       document.getElementById("x").textContent = `X :  ${Math.round(x)}`;
       document.getElementById("y").textContent = `Y :  ${Math.round(y)}`;
     };
