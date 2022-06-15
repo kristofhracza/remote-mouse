@@ -1,6 +1,8 @@
 # Remote mouse
 Control your mouse from your phone screen.
 
+![screenshot](/screen.jpg)
+
 # Start:
 `py server.py`
 
