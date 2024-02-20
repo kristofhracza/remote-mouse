@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 
 # Flask app
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
 # Main page
 @app.route("/")
@@ -11,7 +11,7 @@ def main():
   return render_template("index.html",data=request.host)
 
 # Receive coordinates from webpage
-@app.route("/coords",methods=['POST'])
+@app.route("/coords",methods=["POST"])
 def coords():
   x = request.get_json()["x"]
   y = request.get_json()["y"]
